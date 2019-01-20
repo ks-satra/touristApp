@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <ion-icon name="home"></ion-icon> หน้าแรก
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label fixed>ชื่อ</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>นามสกุล</ion-label>
+      <ion-input type="text" [(ngModel)]="lname"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-card>
+    <ion-item>
+      ตรวจสอบชื่อ
+      <br> ชื่อ: {{ name }} นามสกุล: {{ lname }}
+    </ion-item>
+  </ion-card>
+  <!-- <button ion-button (click)="show()">ยืนยัน</button>
+  <button ion-button color="dark" (click)="gotoPlace()">ดูสถานที่</button> -->
+  <button ion-button icon-end (click)="show()" color="secondary">
+    ยืนยัน
+    <ion-icon name="checkmark"></ion-icon>
+  </button>
+  <button ion-button icon-end (click)="gotoPlace()">
+    ดูสถานที่
+    <ion-icon name="eye"></ion-icon>
+  </button>
+</ion-content>
