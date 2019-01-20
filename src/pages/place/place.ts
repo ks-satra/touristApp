@@ -22,7 +22,7 @@ export class PlacePage {
 
   ionViewDidLoad() {
     // console.log('ionViewDidLoad PlacePage');
-    this.http.post("http://localhost/touristAppApi/get-place.php", JSON.stringify({
+    this.http.post("http://10.70.45.230/touristAppApi/get-place.php", JSON.stringify({
       limit: 3
     })).subscribe((res:any)=>{
       this.data = res.data;
